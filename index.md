@@ -2,123 +2,195 @@
 layout: home
 title: "Welcome"
 ---
----
-layout: home
-title: "Home"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veeranjaneyulu Golakoti | Enterprise Solutions & Generative AI</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .about-bg { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); }
+    .profile-img { filter: brightness(1.1) contrast(1.2); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-relaxed">
 
-<!-- Hero Section -->
-<section id="home" class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <h1>Building Tomorrow’s Enterprise Solutions Today</h1>
-      <p class="subtitle">Transforming complex business challenges into scalable, cloud-native microservices with expertise in Java, AWS, and AI-driven innovation.</p>
-      <div class="hero-buttons">
-        <a href="#portfolio" class="btn btn-primary"><i class="fas fa-code"></i> View My Work</a>
-        <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Get In Touch</a>
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <strong>Location</strong>
-            <p>Singapore</p>
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#home" class="text-xl font-bold">VG Solutions</a>
+      <ul class="flex space-x-6">
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="#journey" class="hover:text-blue-600">Journey</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Work</a></li>
+        <li><a href="#insights" class="hover:text-blue-600">Insights</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="h-screen bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center pt-16">
+    <div class="container mx-auto px-6 text-white">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Building Tomorrow’s Enterprise Solutions Today</h1>
+      <p class="mt-4 text-lg md:text-xl">Java Microservices | GovTech Platforms | Generative AI Innovator</p>
+      <div class="mt-6">
+        <a href="#projects" class="px-6 py-3 bg-white text-blue-600 font-medium rounded shadow hover:bg-gray-100 transition">View My Work</a>
+        <a href="#contact" class="ml-4 px-6 py-3 border border-white text-white rounded hover:bg-white hover:text-blue-600 transition">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-6 md:flex md:items-center">
+      <div class="md:w-1/2 p-6 about-bg rounded-lg shadow-lg">
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="mb-4"><strong>Veeranjaneyulu Golakoti</strong>—enterprise software leader with <strong>13+ years</strong> of experience in Java microservices, Hibernate/JPA, and government-scale platforms like ACRA.</p>
+        <p class="mb-4">As Associate Manager at Accenture Singapore, I architect secure, scalable APIs with Spring Boot, enforce OAuth2/SAML2 standards, and streamline deployments on AWS ECS, Lambda, Azure, Kubernetes, and Docker.</p>
+        <p class="mb-4">Passionate about DevOps—Jenkins pipelines, Terraform IaC, and zero-downtime strategies—and innovating with <strong>Generative AI</strong>: LLM bots, RAG workflows, and agentic systems for next-gen enterprise solutions.</p>
+        <p><strong>Location:</strong> Singapore</p>
+      </div>
+      <div class="md:w-1/2 p-6 flex justify-center">
+        <img src="/assets/images/Veeru_AI.png" alt="Veeranjaneyulu Golakoti" class="w-48 h-48 md:w-64 md:h-64 rounded-full profile-img shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Technical Expertise</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-center">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Languages & Frameworks</h3>
+          <p>Java, Spring Boot, Hibernate, JPA, MyBatis</p>
+          <p>Python (AI Prototyping), Node.js</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Cloud & DevOps</h3>
+          <p>AWS (ECS, Lambda, S3), Azure</p>
+          <p>Docker, Kubernetes, Jenkins, Terraform</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Security & Integration</h3>
+          <p>OAuth2, SAML2, Spring Security</p>
+          <p>REST & GraphQL APIs, Microservices</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Generative AI</h3>
+          <p>LLM Integration, RAG, Agentic Systems</p>
+          <p>Prompt Engineering, Databricks Model Serving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Professional Journey</h2>
+      <ul class="border-l-2 border-blue-600 ml-4">
+        <li class="mb-6">
+          <span class="inline-block w-4 h-4 bg-blue-600 rounded-full -ml-2"></span>
+          <div class="ml-6">
+            <h4 class="font-semibold">Associate Manager, Accenture Singapore</h4>
+            <span class="text-sm text-gray-600">2021 – Present</span>
+            <p class="mt-2 text-gray-700 text-sm">Leading Java microservices & cloud teams, driving AI PoCs, and DevOps pipelines.</p>
+          </div>
+        </li>
+        <li class="mb-6">
+          <span class="inline-block w-4 h-4 bg-blue-600 rounded-full -ml-2"></span>
+          <div class="ml-6">
+            <h4 class="font-semibold">Senior Java Developer, Accenture Singapore</h4>
+            <span class="text-sm text-gray-600">2018 – 2021</span>
+            <p class="mt-2 text-gray-700 text-sm">Architected ACRA regulatory platform, optimized throughput, and enforced security standards.</p>
+          </div>
+        </li>
+        <li>
+          <span class="inline-block w-4 h-4 bg-blue-600 rounded-full -ml-2"></span>
+          <div class="ml-6">
+            <h4 class="font-semibold">Java Developer, Accenture India</h4>
+            <span class="text-sm text-gray-600">2012 – 2018</span>
+            <p class="mt-2 text-gray-700 text-sm">Built enterprise integration solutions, financial services APIs, and performance tuning.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Featured Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://veerugolakoti.github.io/assets/project-acra.jpg" alt="ACRA Regulatory Platform" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">ACRA Regulatory Platform</h3>
+            <p class="text-gray-600 text-sm mb-4">High-throughput Java microservices for government regulatory workflows.</p>
+            <a href="#" class="text-blue-600 font-medium hover:underline">View Details →</a>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://veerugolakoti.github.io/assets/project-ai.jpg" alt="Generative AI PoC" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">Generative AI PoC</h3>
+            <p class="text-gray-600 text-sm mb-4">Integrated LLMs with backend services for automated report generation.</p>
+            <a href="#" class="text-blue-600 font-medium hover:underline">View Details →</a>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow hover:shadow-lg transition">
+          <img src="https://veerugolakoti.github.io/assets/project-devops.jpg" alt="DevOps Pipeline" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2">DevOps Pipeline Automation</h3>
+            <p class="text-gray-600 text-sm mb-4">Terraform + Jenkins IaC for zero-downtime deployments across environments.</p>
+            <a href="#" class="text-blue-600 font-medium hover:underline">View Details →</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- About Section -->
-<section id="about" class="section">
-  <div class="container">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-content">
-      <div class="about-image">
-        <img src="/assets/images/Veeru_AI.png" alt="Veeranjaneyulu Golakoti" style="max-width:200px; border-radius:50%; display:block; margin:0 auto;" />
-      </div>
-      <div class="about-text">
-        <p>I’m <strong>Veeranjaneyulu Golakoti</strong>, a passionate technologist with 13 years of hands-on experience architecting and delivering enterprise-scale applications that serve millions of users. My journey has taken me from building robust Java microservices for healthcare leaders to leading critical government platform modules for Singapore's ACRA registration system.</p>
-        <p>Currently serving as Associate Manager at Accenture Singapore, I specialize in cloud-native architectures, secure API design, and high-availability systems that maintain 24/7 uptime. Recently, I’ve been diving deep into Generative AI and Agentic systems, exploring how intelligence can revolutionize traditional software engineering practices.</p>
-        <p>My ultimate ambition is to channel this extensive experience into founding a tech startup that leverages cutting-edge AI to solve real-world problems at scale.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Skills Section -->
-<section id="skills" class="section skills">
-  <div class="container">
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="skills-grid">
-      <div class="skill-category fade-in">
-        <h3><i class="fas fa-code"></i> Languages & Frameworks</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">Java</span>
-          <span class="skill-tag">Spring Boot</span>
-          <span class="skill-tag">Hibernate</span>
-          <span class="skill-tag">JPA</span>
-          <span class="skill-tag">MyBatis</span>
-        </div>
-      </div>
-      <div class="skill-category fade-in">
-        <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">AWS (ECS, Lambda, S3)</span>
-          <span class="skill-tag">Azure</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">Kubernetes</span>
-          <span class="skill-tag">Jenkins</span>
-        </div>
-      </div>
-      <div class="skill-category fade-in">
-        <h3><i class="fas fa-shield-alt"></i> Security & Integration</h3>
-        <div class="skill-tags">
-          <span class="skill-tag">OAuth2</span>
-          <span class="skill-tag">SAML2</span>
-          <span class="skill-tag">Spring Security</span>
-          <span class="skill-tag">REST APIs</span>
-        </div>
+  <!-- Insights -->
+  <section id="insights" class="py-20">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-semibold mb-8 text-center">Latest Insights</h2>
+      <div class="space-y-6 max-w-3xl mx-auto">
+        <article class="bg-gray-50 p-6 rounded-lg shadow">
+          <h4 class="text-2xl font-semibold mb-2">Driving AI in Enterprise: Best Practices</h4>
+          <p class="text-gray-600 text-sm mb-4">Exploring integration of LLMs with existing microservices, security considerations, and RAG patterns.</p>
+          <a href="https://veerugolakoti.github.io/insights/ai-enterprise" class="text-blue-600 hover:underline">Read more →</a>
+        </article>
+        <article class="bg-gray-50 p-6 rounded-lg shadow">
+          <h4 class="text-2xl font-semibold mb-2">Secure API Design with OAuth2 & SAML2</h4>
+          <p class="text-gray-600 text-sm mb-4">Deep dive into best practices for implementing OAuth2 and SAML2 in microservices.</p>
+          <a href="https://veerugolakoti.github.io/insights/secure-api" class="text-blue-600 hover:underline">Read more →</a>
+        </article>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Experience Section -->
-<section id="experience" class="section">
-  <div class="container">
-    <h2 class="section-title">Professional Journey</h2>
-    <div class="experience-timeline">
-      <!-- Timeline items here -->
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-blue-600 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Let’s Build Something Together</h2>
+      <p class="mb-8">Email me at <a href="mailto:veerugolakoti@gmail.com" class="underline">veerugolakoti@gmail.com</a><br>Connect on <a href="https://linkedin.com/in/veerugolakoti" class="underline" target="_blank">LinkedIn</a> │ <a href="https://github.com/veerugolakoti" class="underline" target="_blank">GitHub</a></p>
+      <form action="mailto:veerugolakoti@gmail.com" method="post" enctype="text/plain" class="max-w-md mx-auto">
+        <input type="text" name="name" placeholder="Your Name" class="w-full mb-4 p-3 rounded text-gray-800" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full mb-4 p-3 rounded text-gray-800" required>
+        <textarea name="message" rows="4" placeholder="Your Message" class="w-full mb-4 p-3 rounded text-gray-800" required></textarea>
+        <button type="submit" class="w-full py-3 bg-white text-blue-600 font-medium rounded hover:bg-gray-100 transition">Send Message</button>
+      </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Portfolio Section -->
-<section id="portfolio" class="section portfolio">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="portfolio-grid">
-      <!-- Portfolio cards here -->
-    </div>
-  </div>
-</section>
+  <footer class="bg-gray-200 py-6 text-center text-sm text-gray-600">
+    &copy; 2025 Veeranjaneyulu Golakoti. All rights reserved.
+  </footer>
 
-<!-- Blog Section -->
-<section id="blog" class="section">
-  <div class="container">
-    <h2 class="section-title">Latest Insights</h2>
-    <div class="blog-grid">
-      <!-- Blog cards here -->
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="section contact">
-  <div class="container">
-    <h2 class="section-title">Let's Connect</h2>
-    <div class="contact-content">
-      <!-- Contact info and form here -->
-    </div>
-  </div>
-</section>
+</body>
+</html>

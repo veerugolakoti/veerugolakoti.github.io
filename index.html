@@ -66,7 +66,7 @@
     <!-- ABOUT -->
     <section id="about" class="max-w-4xl mx-auto px-6 py-20">
       <div class="md:flex md:items-start md:space-x-8">
-        <img src="assets/images/Veeru_AI.png" alt="Veeranjaneyulu Golakoti" class="w-48 h-48 object-cover shadow-lg mb-6 md:mb-0"/>
+        <img src="assets/images/Veeru_AI.png" alt="Veeranjaneyulu Golakoti" class="w-56 h-56 object-cover shadow-lg mb-6 md:mb-0"/>
         <div>
           <h2 class="text-3xl font-semibold text-green-400 mb-4">Veeranjaneyulu Golakoti</h2>
           <p class="mb-4">Enterprise software leader with <strong>13+ years</strong> in Java microservices, ACRA, and cloud‑native architectures.</p>
@@ -76,7 +76,84 @@
       </div>
     </section>
 
-    <!-- SKILLS, JOURNEY, PROJECTS, INSIGHTS, CONTACT -->
+    <!-- SKILLS -->
+    <section id="skills" class="bg-[#010409] py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-green-400 mb-8">Technical Expertise</h2>
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300">
+          <li class="bg-[#161b22] p-4 rounded-lg">Java, Spring Boot, Hibernate, JPA</li>
+          <li class="bg-[#161b22] p-4 rounded-lg">AWS, Azure, Docker, Kubernetes</li>
+          <li class="bg-[#161b22] p-4 rounded-lg">OAuth2, SAML2, REST & GraphQL</li>
+          <li class="bg-[#161b22] p-4 rounded-lg">GitHub Copilot, OpenAI API, Tabnine</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-green-400 mb-8">Professional Journey</h2>
+        <ol class="list-decimal list-inside space-y-4 text-gray-300">
+          <li><strong>Associate Manager, Accenture SG</strong> (2021–Present): Led AI PoCs & DevOps pipelines, 99.9% uptime.</li>
+          <li><strong>Senior Java Developer, Accenture SG</strong> (2018–2021): Built Enterprise Identity Platform—40% latency reduction.</li>
+          <li><strong>Java Developer, Accenture India</strong> (2012–2018): Developed financial services APIs & integrations.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="bg-[#010409] py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-green-400 mb-8">Featured Projects</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://veerugolakoti.github.io/assets/project-acra.jpg" class="w-full h-56 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
+              <h3 class="font-semibold mb-2">Enterprise Identity Platform</h3>
+              <p>Secured millions of filings; 99.9% uptime, 40% latency reduction.</p>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://veerugolakoti.github.io/assets/project-ai.jpg" class="w-full h-56 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
+              <h3 class="font-semibold mb-2">AI-Enhanced Workflow</h3>
+              <p>30% faster delivery, 25% bug reduction with Copilot & IntelliJ AI.</p>
+            </div>
+          </div>
+          <div class="group relative overflow-hidden rounded-lg">
+            <img src="https://veerugolakoti.github.io/assets/project-devops.jpg" class="w-full h-56 object-cover" />
+            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
+              <h3 class="font-semibold mb-2">DevOps Automation</h3>
+              <p>Terraform & Jenkins for zero-downtime deployments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSIGHTS -->
+    <section id="insights" class="py-20">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-semibold text-green-400 mb-8">Latest Insights</h2>
+        <ul class="space-y-4 text-gray-300">
+          <li><a href="https://veerugolakoti.github.io/insights/ai-enterprise" class="underline hover:text-green-300">Driving AI in Enterprise</a></li>
+          <li><a href="https://veerugolakoti.github.io/insights/secure-api" class="underline hover:text-green-300">Secure API Design</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-[#010409] py-20">
+      <div class="max-w-6xl mx-auto px-6 text-gray-300">
+        <h2 class="text-3xl font-semibold text-green-400 mb-8">Contact Me</h2>
+        <form action="mailto:veerugolakoti@gmail.com" method="post" class="grid gap-4 sm:grid-cols-2">
+          <input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-[#161b22] focus:outline-green-500" required>
+          <input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-[#161b22] focus:outline-green-500" required>
+          <textarea name="message" cols="1" rows="4" placeholder="Your Message" class="p-3 rounded bg-[#161b22] focus:outline-green-500 sm:col-span-2" required></textarea>
+          <button type="submit" class="btn-primary px-6 py-3 rounded-full sm:col-span-2">Send Message</button>
+        </form>
+      </div>
+    </section>
 
   </main>
 

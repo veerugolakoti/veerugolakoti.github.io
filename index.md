@@ -730,7 +730,13 @@ title: "Welcome"
                     <a href="#contact" class="btn btn-secondary">
                         <i class="fas fa-envelope"></i> Get In Touch
                     </a>
-                </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <strong>Location</strong>
+                            <p>Singapore</p>
+                        </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -740,15 +746,15 @@ title: "Welcome"
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-
-            <div class="about-image">
-              <img 
-                src="assets/images/Veeru_AI.png" 
-                alt="Veeranjaneyulu Golakoti" 
-                style="max-width:200px; border-radius:50%; display:block; margin:0 auto;
-              "/>
+                <div class="about-image">
+                     <img 
+                        src="/assets/images/Veeru_AI.png" 
+                        alt="Veeranjaneyulu Golakoti" 
+                        style="max-width:200px; border-radius:50%; display:block; margin:0 auto;"
+                      />
+                </div>
             </div>
-        <div class="about-text">
+            <div class="about-text">
                     <p>I'm Veeranjaneyulu Golakoti, a passionate technologist with 13 years of hands-on experience architecting and delivering enterprise-scale applications that serve millions of users. My journey has taken me from building robust Java microservices for healthcare giants like UnitedHealth Group to leading critical government platform modules for Singapore's ACRA registration system.</p>
                     
                     <p>Currently serving as Associate Manager at Accenture Singapore, I specialize in cloud-native architectures, secure API design, and high-availability systems that maintain 24/7 uptime. Recently, I've been diving deep into GenAI experiments, exploring how artificial intelligence can revolutionize traditional software engineering practices and create more intelligent, adaptive systems.</p>
@@ -1004,14 +1010,7 @@ title: "Welcome"
                         <i class="fas fa-phone"></i>
                         <div>
                             <strong>Phone</strong>
-                            <p>+65 84866872</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Location</strong>
-                            <p>Singapore</p>
+                            <p>+65 84866872 / +91 9533442326</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1021,6 +1020,14 @@ title: "Welcome"
                             <p>Connect with me professionally</p>
                         </div>
                     </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <p>+65 84866872 / +91 9533442326</p>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 <div class="contact-form">
                     <form>
@@ -1058,6 +1065,9 @@ title: "Welcome"
                 </a>
                 <a href="mailto:veerugolakoti@gmail.com">
                     <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/6584866872" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
                 </a>
                 <a href="https://github.com" target="_blank">
                     <i class="fab fa-github"></i>

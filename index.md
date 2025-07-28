@@ -740,12 +740,15 @@ title: "Welcome"
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <div class="profile-placeholder">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                </div>
-                <div class="about-text">
+
+            <div class="about-image">
+              <img 
+                src="/assets/images/veer.jpg" 
+                alt="Veeranjaneyulu Golakoti" 
+                style="max-width:200px; border-radius:50%; display:block; margin:0 auto;
+              "/>
+            </div>
+        <div class="about-text">
                     <p>I'm Veeranjaneyulu Golakoti, a passionate technologist with 13 years of hands-on experience architecting and delivering enterprise-scale applications that serve millions of users. My journey has taken me from building robust Java microservices for healthcare giants like UnitedHealth Group to leading critical government platform modules for Singapore's ACRA registration system.</p>
                     
                     <p>Currently serving as Associate Manager at Accenture Singapore, I specialize in cloud-native architectures, secure API design, and high-availability systems that maintain 24/7 uptime. Recently, I've been diving deep into GenAI experiments, exploring how artificial intelligence can revolutionize traditional software engineering practices and create more intelligent, adaptive systems.</p>

@@ -1,176 +1,330 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Veeranjaneyulu Golakoti | Portfolio</title>
-
-  <!-- Tailwind & Code Font -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Fira Code', monospace; background-color: #0d1117; color: #c9d1d9; }
-    nav { backdrop-filter: blur(12px); background-color: rgba(13,17,23,0.8); }
-    .hero-bg { background: url('assets/images/code-bg.jpg') center/cover no-repeat; }
-    .btn-primary { background-color: #238636; color: #fff; }
-    .btn-secondary { border:2px solid #58a6ff; color:#58a6ff; }
-    .btn-secondary:hover { background-color: rgba(88,166,255,0.2); }
-    a { transition: color 0.2s; }
-    a:hover { color: #58a6ff; }
-    section { scroll-margin-top: 4rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veeranjaneyulu Golakoti - Associate Manager | Tech Leader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --dark-navy: #0a192f;
+            --light-navy: #112240;
+            --lightest-navy: #233554;
+            --slate: #8892b0;
+            --light-slate: #a8b2d1;
+            --lightest-slate: #ccd6f6;
+            --white: #e6f1ff;
+            --green: #64ffda;
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Roboto Mono', monospace;
+        }
+        html {
+            background-color: var(--dark-navy);
+        }
+        body {
+            font-family: var(--font-sans);
+            color: var(--slate);
+            background-color: var(--dark-navy);
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .highlight {
+            color: var(--green);
+        }
+        .nav-link.active {
+            color: var(--green);
+            transform: scale(1.1);
+        }
+        .nav-link span {
+            display: inline-block;
+            transition: transform 0.3s ease-out;
+        }
+        .nav-link:hover span {
+            transform: translateX(5px);
+        }
+        .card-glow {
+            background: var(--light-navy);
+            border: 1px solid var(--lightest-navy);
+            transition: all 0.3s ease;
+        }
+        .card-glow:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+            border-color: var(--green);
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -30px;
+            top: 10px;
+            width: 9px;
+            height: 9px;
+            border: 2px solid var(--green);
+            border-radius: 50%;
+            background-color: var(--dark-navy);
+            z-index: 1;
+        }
+        .timeline-connector {
+            position: absolute;
+            left: -26px;
+            top: 10px;
+            bottom: -10px;
+            width: 2px;
+            background-color: var(--lightest-navy);
+        }
+        .contact-button {
+            transition: all 0.3s ease;
+        }
+        .contact-button:hover {
+             box-shadow: 0 0 15px 0 var(--green);
+        }
+    </style>
 </head>
-<body>
-  <!-- NAV -->
-  <nav class="fixed w-full z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="#home" class="text-xl font-semibold text-green-400">Veeru Golakoti</a>
-      <ul class="hidden md:flex space-x-8 text-gray-400">
-        <li><a href="#about" class="hover:text-green-300">About</a></li>
-        <li><a href="#skills" class="hover:text-green-300">Skills</a></li>
-        <li><a href="#journey" class="hover:text-green-300">Journey</a></li>
-        <li><a href="#projects" class="hover:text-green-300">Projects</a></li>
-        <li><a href="#insights" class="hover:text-green-300">Insights</a></li>
-        <li><a href="#contact" class="hover:text-green-300">Contact</a></li>
-      </ul>
-      <button class="md:hidden text-gray-400" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden bg-[#0d1117] px-6 pb-4">
-      <a href="#about" class="block py-2 text-gray-400 hover:text-green-300">About</a>
-      <a href="#skills" class="block py-2 text-gray-400 hover:text-green-300">Skills</a>
-      <a href="#journey" class="block py-2 text-gray-400 hover:text-green-300">Journey</a>
-      <a href="#projects" class="block py-2 text-gray-400 hover:text-green-300">Projects</a>
-      <a href="#insights" class="block py-2 text-gray-400 hover:text-green-300">Insights</a>
-      <a href="#contact" class="block py-2 text-gray-400 hover:text-green-300">Contact</a>
-    </div>
-  </nav>
+<body class="bg-dark-navy">
 
-  <!-- HERO -->
-  <header id="home" class="hero-bg h-screen flex items-center justify-center text-center">
-    <div class="bg-black bg-opacity-70 p-8 rounded-lg">
-      <h1 class="text-5xl md:text-7xl font-semibold text-green-400 mb-4">Building Tomorrow’s Enterprise Solutions</h1>
-      <p class="text-lg md:text-2xl text-gray-300 mb-6">Java Microservices · GovTech Platforms · Generative AI</p>
-      <div class="space-x-4">
-        <a href="#projects" class="btn-primary px-6 py-3 rounded-full hover:bg-green-500">View Projects</a>
-        <a href="#contact" class="btn-secondary px-6 py-3 rounded-full">Get In Touch</a>
-      </div>
-    </div>
-  </header>
-
-  <main class="pt-24">
-    <!-- ABOUT -->
-    <section id="about" class="max-w-4xl mx-auto px-6 py-20">
-      <div class="md:flex md:items-start md:space-x-8">
-        <img src="assets/images/Veeru_AI.png" alt="Veeranjaneyulu Golakoti" class="w-56 h-56 object-cover shadow-lg mb-6 md:mb-0"/>
-        <div>
-          <h2 class="text-3xl font-semibold text-green-400 mb-4">Veeranjaneyulu Golakoti</h2>
-          <p class="mb-4">Enterprise software leader with <strong>13+ years</strong> in Java microservices and cloud‑native architectures.</p>
-          <p class="mb-4">Associate Manager at Accenture SG: Implement secure APIs, Worflows, DevOps automation, 24/7 uptime.</p>
-          <p class="mb-4">Pioneering <strong>Generative AI</strong>—LLM agents, RAG workflows, AI‑driven code optimization.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="bg-[#010409] py-20">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-green-400 mb-8">Technical Expertise</h2>
-        <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-gray-300">
-          <li class="bg-[#161b22] p-4 rounded-lg flex items-center space-x-3 hover:shadow-lg transition">
-            <img src="assets/images/java-icon.svg" alt="Java" class="w-8 h-8" />
-            <span>Java, Spring Boot, Hibernate, JPA</span>
-          </li>
-          <li class="bg-[#161b22] p-4 rounded-lg flex items-center space-x-3 hover:shadow-lg transition">
-            <img src="assets/images/cloud-icon.svg" alt="Cloud" class="w-8 h-8" />
-            <span>AWS, Azure, Docker, Kubernetes, Microservices</span>
-          </li>
-          <li class="bg-[#161b22] p-4 rounded-lg flex items-center space-x-3 hover:shadow-lg transition">
-            <img src="assets/images/security-icon.svg" alt="Security" class="w-8 h-8" />
-            <span>OAuth2, SAML2, REST &amp; GraphQL</span>
-          </li>
-          <li class="bg-[#161b22] p-4 rounded-lg flex items-center space-x-3 hover:shadow-lg transition">
-            <img src="assets/images/ai-icon.svg" alt="AI Tools" class="w-8 h-8" />
-            <span>GitHub Copilot, OpenAI API, Tabnine</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- JOURNEY -->
-    <section id="journey" class="py-20">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-green-400 mb-8">Professional Journey</h2>
-        <ol class="list-decimal list-inside space-y-4 text-gray-300">
-          <li><strong>Associate Manager, Accenture SG</strong> (2021–Present): Led AI PoCs & DevOps pipelines, 99.9% uptime.</li>
-          <li><strong>Senior Java Developer, Accenture SG</strong> (2018–2021): Built Enterprise Identity Platform—40% latency reduction.</li>
-          <li><strong>Java Developer, Accenture India</strong> (2012–2018): Developed financial services APIs & integrations.</li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="bg-[#010409] py-20">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-green-400 mb-8">Featured Projects</h2>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="group relative overflow-hidden rounded-lg">
-            <img src="https://veerugolakoti.github.io/assets/project-acra.jpg" class="w-full h-56 object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
-              <h3 class="font-semibold mb-2">Enterprise Identity Platform</h3>
-              <p>Secured millions of filings; 99.9% uptime, 40% latency reduction.</p>
+    <div class="flex flex-col lg:flex-row min-h-screen">
+        <!-- Left Static Panel -->
+        <header class="lg:w-1/2 lg:h-screen lg:sticky top-0 p-8 sm:p-12 lg:p-24 flex flex-col justify-between">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-bold text-lightest-slate">Veeranjaneyulu Golakoti</h1>
+                <h2 class="text-xl md:text-2xl mt-3 font-medium text-slate">Associate Manager at Accenture</h2>
+                <p class="mt-4 max-w-xs text-slate">I build and lead high-performing teams to deliver robust, scalable software solutions.</p>
+                <nav class="hidden lg:block mt-24">
+                    <ul class="space-y-4">
+                        <li><a href="#about" class="nav-link group flex items-center py-2 text-slate font-bold transition-all duration-300">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-slate group-hover:w-16 group-hover:bg-green transition-all duration-300"></span>
+                            <span class="nav-text">ABOUT</span>
+                        </a></li>
+                        <li><a href="#experience" class="nav-link group flex items-center py-2 text-slate font-bold transition-all duration-300">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-slate group-hover:w-16 group-hover:bg-green transition-all duration-300"></span>
+                            <span class="nav-text">EXPERIENCE</span>
+                        </a></li>
+                        <li><a href="#skills" class="nav-link group flex items-center py-2 text-slate font-bold transition-all duration-300">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-slate group-hover:w-16 group-hover:bg-green transition-all duration-300"></span>
+                            <span class="nav-text">SKILLS</span>
+                        </a></li>
+                         <li><a href="#ai-journey" class="nav-link group flex items-center py-2 text-slate font-bold transition-all duration-300">
+                            <span class="nav-indicator mr-4 h-px w-8 bg-slate group-hover:w-16 group-hover:bg-green transition-all duration-300"></span>
+                            <span class="nav-text">AI JOURNEY</span>
+                        </a></li>
+                    </ul>
+                </nav>
             </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-lg">
-            <img src="https://veerugolakoti.github.io/assets/project-ai.jpg" class="w-full h-56 object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
-              <h3 class="font-semibold mb-2">AI-Enhanced Workflow</h3>
-              <p>30% faster delivery, 25% bug reduction with Copilot & IntelliJ AI.</p>
+            <div class="flex items-center space-x-6 mt-8 lg:mt-0">
+                <a href="https://www.linkedin.com/in/veeru-golakoti/" target="_blank" class="text-slate hover:text-green transition-colors duration-300"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                <a href="https://github.com/veerugolakoti" target="_blank" class="text-slate hover:text-green transition-colors duration-300"><i class="fab fa-github text-2xl"></i></a>
+                <a href="mailto:veerugolakoti@gmail.com" class="text-slate hover:text-green transition-colors duration-300"><i class="fa fa-envelope text-2xl"></i></a>
             </div>
-          </div>
-          <div class="group relative overflow-hidden rounded-lg">
-            <img src="https://veerugolakoti.github.io/assets/project-devops.jpg" class="w-full h-56 object-cover" />
-            <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition p-6 text-gray-300">
-              <h3 class="font-semibold mb-2">DevOps Automation</h3>
-              <p>Terraform & Jenkins for zero-downtime deployments.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+        </header>
 
-    <!-- INSIGHTS -->
-    <section id="insights" class="py-20">
-      <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-semibold text-green-400 mb-8">Latest Insights</h2>
-        <ul class="space-y-4 text-gray-300">
-          <li><a href="https://veerugolakoti.github.io/insights/ai-enterprise" class="underline hover:text-green-300">Driving AI in Enterprise</a></li>
-          <li><a href="https://veerugolakoti.github.io/insights/secure-api" class="underline hover:text-green-300">Secure API Design</a></li>
-        </ul>
-      </div>
-    </section>
+        <!-- Right Scrolling Content -->
+        <main class="lg:w-1/2 p-8 sm:p-12 lg:py-24">
+            
+            <section id="home" class="min-h-screen flex items-center section">
+                 <div>
+                    <p class="font-mono text-green mb-4">Hi, my name is Veeru Golakoti.</p>
+                    <p class="text-lg text-light-slate leading-relaxed">
+                        With over 12 years of experience building enterprise-scale applications, I am a seasoned <span class="highlight">Technical Lead and Associate Manager</span> adept at leading Agile teams. My expertise lies in delivering critical modules for diverse sectors including Healthcare, Finance, Retail, and Government, leveraging <span class="highlight">Java, Spring Boot, and cloud-native microservices</span>. I have hands-on proficiency in AWS, DevOps practices, and enhancing system reliability through dedicated hypercare and recovery processes.
+                    </p>
+                    <div class="mt-8 flex flex-wrap gap-4">
+                        <a href="tel:+6584866872" class="contact-button border-2 border-green text-green font-bold text-md py-3 px-6 rounded-md hover:bg-green/10">
+                            <i class="fas fa-phone-alt mr-2"></i> Call (SG)
+                        </a>
+                         <a href="tel:+919533442326" class="contact-button border-2 border-green text-green font-bold text-md py-3 px-6 rounded-md hover:bg-green/10">
+                            <i class="fas fa-phone-alt mr-2"></i> Call (IN)
+                        </a>
+                        <a href="https://www.linkedin.com/in/veeranjaneyulu-golakoti-a2095b107/" target="_blank" class="contact-button border-2 border-green text-green font-bold text-md py-3 px-6 rounded-md hover:bg-green/10">
+                            <i class="fab fa-linkedin-in mr-2"></i> Connect on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="bg-[#010409] py-20">
-      <div class="max-w-6xl mx-auto px-6 text-gray-300">
-        <h2 class="text-3xl font-semibold text-green-400 mb-8">Contact Me</h2>
-        <form action="mailto:veerugolakoti@gmail.com" method="post" class="grid gap-4 sm:grid-cols-2">
-          <input type="text" name="name" placeholder="Your Name" class="p-3 rounded bg-[#161b22] focus:outline-green-500" required>
-          <input type="email" name="email" placeholder="Your Email" class="p-3 rounded bg-[#161b22] focus:outline-green-500" required>
-          <textarea name="message" cols="1" rows="4" placeholder="Your Message" class="p-3 rounded bg-[#161b22] focus:outline-green-500 sm:col-span-2" required></textarea>
-          <button type="submit" class="btn-primary px-6 py-3 rounded-full sm:col-span-2">Send Message</button>
-        </form>
-      </div>
-    </section>
+            <section id="about" class="mb-32 section">
+                <div class="flex items-center mb-8">
+                     <h2 class="text-2xl font-bold text-lightest-slate">About</h2>
+                     <div class="h-px w-24 bg-green ml-4"></div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-12 items-start">
+                    <div class="text-light-slate space-y-4 text-lg">
+                        <p>As a leader in software engineering, I bridge the gap between technical strategy and execution. At Accenture, I lead pivotal modules for Singapore's GovTech platform, steering architectural decisions and ensuring top-tier security and quality standards.</p>
+                        <p>My leadership style is rooted in Agile principles, fostering collaboration and removing impediments to empower my teams. I thrive on solving complex design challenges and ensuring our applications are not only functional but also resilient and scalable, maintaining 24/7 uptime for mission-critical systems.</p>
+                    </div>
+                     <img src="/assets/images/My Profile PIC.jpeg" alt="Veeranjaneyulu Golakoti" class="rounded-lg w-full md:w-1/3 object-cover border-2 border-green/30" onerror="this.onerror=null;this.src='https://placehold.co/600x600/0a192f/ccd6f6?text=Veeru+G.';">
+                </div>
+            </section>
 
-  </main>
+            <section id="experience" class="mb-32 section">
+                <div class="flex items-center mb-12">
+                     <h2 class="text-2xl font-bold text-lightest-slate">Experience</h2>
+                     <div class="h-px w-24 bg-green ml-4"></div>
+                </div>
+                <div class="relative">
+                    <!-- Experience 1 -->
+                    <div class="relative pl-8 mb-12 timeline-item">
+                        <div class="timeline-connector"></div>
+                        <h3 class="text-xl font-bold text-lightest-slate">Associate Manager (Lead Developer)</h3>
+                        <p class="text-md font-semibold text-slate mb-2">Accenture Pte. Ltd., Singapore</p>
+                        <p class="font-mono text-sm text-slate/80 mb-4">October 2022 — Present</p>
+                        <ul class="list-disc list-inside text-light-slate space-y-2 marker:text-green">
+                            <li>Leading development for crucial modules (Auth, User Management, etc.) for Singapore Gov’s ACRA platform.</li>
+                            <li>Implementing secure microservices architecture and participating in Architectural Review Board meetings.</li>
+                            <li>Overseeing CI/CD best practices on AWS and maintaining 24/7 application uptime through hypercare.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 2 -->
+                    <div class="relative pl-8 mb-12 timeline-item">
+                        <div class="timeline-connector"></div>
+                        <h3 class="text-xl font-bold text-lightest-slate">Technical Java Lead</h3>
+                        <p class="text-md font-semibold text-slate mb-2">UnitedHealth Group (Optum), Hyderabad, India</p>
+                        <p class="font-mono text-sm text-slate/80 mb-4">April 2021 — September 2022</p>
+                        <ul class="list-disc list-inside text-light-slate space-y-2 marker:text-green">
+                            <li>Led two Agile scrum teams in building the FHIR-based FLEX platform using Spring Boot microservices.</li>
+                            <li>Provided daily technical leadership to resolve design challenges and Agile impediments.</li>
+                        </ul>
+                    </div>
+                    <!-- Experience 3 -->
+                    <div class="relative pl-8 timeline-item">
+                        <div class="timeline-connector"></div>
+                        <h3 class="text-xl font-bold text-lightest-slate">Senior Systems Analyst</h3>
+                        <p class="text-md font-semibold text-slate mb-2">GAP IT Services India Pvt Ltd., Hyderabad, India</p>
+                        <p class="font-mono text-sm text-slate/80 mb-4">November 2018 — March 2021</p>
+                        <ul class="list-disc list-inside text-light-slate space-y-2 marker:text-green">
+                           <li>Developed sourcing and manufacturing systems using Spring Boot REST APIs.</li>
+                           <li>Led an 8-member scrum team and managed DevOps activities throughout the Agile lifecycle.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
-  <footer class="bg-[#010409] text-center py-6">
-    <p class="text-gray-500 text-sm">&copy; 2025 Veeranjaneyulu Golakoti. All rights reserved.</p>
-  </footer>
+            <section id="skills" class="mb-32 section">
+                 <div class="flex items-center mb-8">
+                     <h2 class="text-2xl font-bold text-lightest-slate">Professional Skills</h2>
+                     <div class="h-px w-24 bg-green ml-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="card-glow p-6 rounded-lg">
+                        <h3 class="font-bold text-lg text-lightest-slate mb-2">Languages & Frameworks</h3>
+                        <p class="text-slate">Java, Spring Boot, Hibernate, JPA, MyBatis, Python</p>
+                    </div>
+                    <div class="card-glow p-6 rounded-lg">
+                        <h3 class="font-bold text-lg text-lightest-slate mb-2">Cloud & DevOps</h3>
+                        <p class="text-slate">AWS (ECS, Lambda, S3, SQS), Azure, PCF, Jenkins, GitLab, Docker</p>
+                    </div>
+                    <div class="card-glow p-6 rounded-lg">
+                        <h3 class="font-bold text-lg text-lightest-slate mb-2">Security & Integration</h3>
+                        <p class="text-slate">OAuth2, SAML2, SSO, Spring Security, Kafka, REST APIs, RabbitMQ</p>
+                    </div>
+                    <div class="card-glow p-6 rounded-lg">
+                        <h3 class="font-bold text-lg text-lightest-slate mb-2">Databases & Tools</h3>
+                        <p class="text-slate">MySQL, Oracle, PostgreSQL, Aurora, Redis, Maven, Git, Dynatrace</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="ai-journey" class="mb-32 section">
+                 <div class="flex items-center mb-8">
+                     <h2 class="text-2xl font-bold text-lightest-slate">My Journey into AI</h2>
+                     <div class="h-px w-24 bg-green ml-4"></div>
+                </div>
+                <div class="card-glow p-8 rounded-lg">
+                    <p class="text-light-slate text-lg mb-4">I am actively expanding my expertise into the transformative field of Artificial Intelligence. My focus is on understanding and applying AI to solve real-world problems, enhance software intelligence, and drive innovation in my projects.</p>
+                    <h3 class="font-bold text-lg text-lightest-slate mb-2 mt-6">Current Areas of Exploration:</h3>
+                    <div class="flex flex-wrap gap-4 mt-4 font-mono">
+                        <span class="bg-green/10 text-green text-sm font-semibold px-3 py-1 rounded-full">Generative AI</span>
+                        <span class="bg-green/10 text-green text-sm font-semibold px-3 py-1 rounded-full">Agentic AI</span>
+                        <span class="bg-green/10 text-green text-sm font-semibold px-3 py-1 rounded-full">Large Language Models (LLMs)</span>
+                        <span class="bg-green/10 text-green text-sm font-semibold px-3 py-1 rounded-full">LangChain</span>
+                        <span class="bg-green/10 text-green text-sm font-semibold px-3 py-1 rounded-full">Ollama</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="text-center text-slate/60 font-mono text-sm py-8 section">
+                <p>Designed & Built by Veeranjaneyulu Golakoti</p>
+                <p>Inspired by modern web design trends.</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const navIndicators = document.querySelectorAll('.nav-indicator');
+            const navTexts = document.querySelectorAll('.nav-text');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.3
+            };
+
+            const sectionObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        
+                        // Update nav links
+                        const id = entry.target.getAttribute('id');
+                        if (id) {
+                            const targetNavLink = document.querySelector(`.nav-link[href="#${id}"]`);
+                            
+                            navLinks.forEach(link => {
+                                link.querySelector('.nav-text').classList.remove('active');
+                                link.querySelector('.nav-indicator').classList.remove('bg-green', 'w-16');
+                                link.querySelector('.nav-indicator').classList.add('bg-slate', 'w-8');
+                            });
+                            
+                            if (targetNavLink) {
+                                targetNavLink.querySelector('.nav-text').classList.add('active');
+                                const indicator = targetNavLink.querySelector('.nav-indicator');
+                                indicator.classList.remove('bg-slate', 'w-8');
+                                indicator.classList.add('bg-green', 'w-16');
+                            }
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+            
+            // Special observer for home section to activate 'about' link
+            const homeObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                     navLinks.forEach(link => {
+                        link.querySelector('.nav-text').classList.remove('active');
+                        link.querySelector('.nav-indicator').classList.remove('bg-green', 'w-16');
+                        link.querySelector('.nav-indicator').classList.add('bg-slate', 'w-8');
+                    });
+                    const aboutLink = document.querySelector('.nav-link[href="#about"]');
+                    if(aboutLink){
+                         aboutLink.querySelector('.nav-text').classList.add('active');
+                         const indicator = aboutLink.querySelector('.nav-indicator');
+                         indicator.classList.remove('bg-slate', 'w-8');
+                         indicator.classList.add('bg-green', 'w-16');
+                    }
+                }
+            }, {threshold: 0.7});
+
+            const homeSection = document.getElementById('home');
+            if(homeSection) {
+                homeObserver.observe(homeSection);
+            }
+
+        });
+    </script>
 </body>
 </html>

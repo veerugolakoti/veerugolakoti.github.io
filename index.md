@@ -743,7 +743,7 @@ title: "Welcome"
 
             <div class="about-image">
               <img 
-                src="/assets/images/veer.jpg" 
+                src="assets/images/Veeru_AI.png" 
                 alt="Veeranjaneyulu Golakoti" 
                 style="max-width:200px; border-radius:50%; display:block; margin:0 auto;
               "/>
